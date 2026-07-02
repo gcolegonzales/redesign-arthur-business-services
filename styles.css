@@ -125,7 +125,7 @@ p{margin:0}
 .mobile-menu a:hover{color:var(--gold)}
 .mobile-menu .mm-cta{margin-top:18px;border:0;background:var(--gold);color:#231a06;border-radius:999px;text-align:center;font-family:"Inter",sans-serif;font-weight:600;font-size:1rem}
 .mobile-menu .mm-call{border:0;color:var(--gold);font-family:"Inter",sans-serif;font-size:.95rem}
-.menu-backdrop{position:fixed;inset:0;background:rgba(10,16,27,.5);z-index:64;opacity:0;pointer-events:none;transition:opacity .4s}
+.menu-backdrop{position:fixed;inset:0;background:rgba(10,16,27,.5);z-index:64;opacity:0;pointer-events:none;cursor:pointer;transition:opacity .4s}
 .menu-backdrop.open{opacity:1;pointer-events:auto}
 
 /* ================= HERO ================= */
@@ -262,7 +262,7 @@ p{margin:0}
 .steps p{color:var(--muted);font-size:.96rem}
 
 /* ================= ABOUT ================= */
-.about{background:linear-gradient(180deg,var(--paper-2),var(--paper))}
+.about{background:linear-gradient(180deg,var(--paper),var(--paper-2))}
 .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(34px,5vw,70px);align-items:center}
 .about-portrait{margin:0}
 .portrait-ph{aspect-ratio:4/5;border-radius:20px;background:
@@ -333,7 +333,7 @@ a.cl-value.big:hover{color:#fff}
 .form-note.error{color:#c0463c;font-weight:600}
 
 /* ================= FOOTER ================= */
-.site-footer{background:#0a1120;color:#a9b7c6;padding:clamp(50px,7vw,72px) 0 30px}
+.site-footer{background:#0a1120;color:#a9b7c6;padding:clamp(50px,7vw,72px) 0 30px;border-top:1px solid rgba(199,154,63,.28)}
 .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:clamp(28px,4vw,56px);padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.1)}
 .foot-brand .brand-text strong{color:#fff;font-size:1.4rem}
 .foot-brand .brand-text span{color:#8496a8;letter-spacing:.18em;font-size:.66rem;text-transform:uppercase}

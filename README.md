@@ -44,8 +44,9 @@ On-page SEO is retrofitted without changing the visible design or content:
 
 - **JSON-LD** structured data (`@type: AccountingService`, with `ProfessionalService`
   via `additionalType`) carrying the firm's real data — name, telephone, url, image,
-  `areaServed` (United States), founder (Jamie Arthur), `sameAs`, and a 5-star / 6-review
-  `aggregateRating`. No street address or geo is included: this is a virtual firm with no
+  `areaServed` (United States), founder (Jamie Arthur), and `sameAs`. No hardcoded review
+  count/rating is embedded, so nothing goes stale as reviews change over time.
+  No street address or geo is included: this is a virtual firm with no
   public address, so those fields are honestly omitted rather than invented.
 - **Canonical**, complete **Open Graph** + **Twitter Card** tags.
 - **`robots.txt`** (allow all + sitemap) and **`sitemap.xml`** at the repo root.
