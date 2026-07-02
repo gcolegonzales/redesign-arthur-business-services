@@ -51,7 +51,7 @@ On-page SEO is retrofitted without changing the visible design or content:
 - **`robots.txt`** (allow all + sitemap) and **`sitemap.xml`** at the repo root.
 
 **Base URL placeholder:** canonical, `og:url`, the sitemap, `robots.txt`, and the schema
-`url`/`image` all use `https://REPLACE-WITH-DOMAIN.com/`. Do a one-line find-and-replace
+`url`/`image` all use `https://arthurbusinessservices.com/`. Do a one-line find-and-replace
 across `index.html`, `sitemap.xml`, and `robots.txt` with the real domain at deploy time.
 The `og:image` points to `assets/photos/og-image.jpg` — drop a real 1200×630 share image
 there (or update the path) before launch.
