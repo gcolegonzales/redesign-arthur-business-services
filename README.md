@@ -38,6 +38,24 @@ scroll-reveal motion, and a prominent inquiry form + click-to-call.
 Just open **`index.html`** in any browser (double-click it). No build step, no
 dependencies. Fully responsive from phones to widescreen; respects reduced-motion.
 
+## SEO
+
+On-page SEO is retrofitted without changing the visible design or content:
+
+- **JSON-LD** structured data (`@type: AccountingService`, with `ProfessionalService`
+  via `additionalType`) carrying the firm's real data — name, telephone, url, image,
+  `areaServed` (United States), founder (Jamie Arthur), `sameAs`, and a 5-star / 6-review
+  `aggregateRating`. No street address or geo is included: this is a virtual firm with no
+  public address, so those fields are honestly omitted rather than invented.
+- **Canonical**, complete **Open Graph** + **Twitter Card** tags.
+- **`robots.txt`** (allow all + sitemap) and **`sitemap.xml`** at the repo root.
+
+**Base URL placeholder:** canonical, `og:url`, the sitemap, `robots.txt`, and the schema
+`url`/`image` all use `https://REPLACE-WITH-DOMAIN.com/`. Do a one-line find-and-replace
+across `index.html`, `sitemap.xml`, and `robots.txt` with the real domain at deploy time.
+The `og:image` points to `assets/photos/og-image.jpg` — drop a real 1200×630 share image
+there (or update the path) before launch.
+
 ## Tech
 
 Static `index.html` + `styles.css` + `script.js`. One Google Fonts link
