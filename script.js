@@ -7,6 +7,7 @@
   var toggle = document.getElementById('menuToggle');
   var menu = document.getElementById('mobileMenu');
   var menuWrap = document.getElementById('mobileMenuWrap');
+  var menuClose = document.getElementById('menuClose');
 
   /* ---- year ---- */
   var y = document.getElementById('year');
@@ -88,8 +89,9 @@
     if (open) {
       header.classList.remove('hidden');
       setInert(true);
-      var f = focusables();
-      if (f.length) f[0].focus();
+      // Move focus into the drawer without letting the browser scroll to it (G3).
+      var target = menuClose || focusables()[0];
+      if (target) target.focus({ preventScroll: true });
     } else {
       setInert(false);
       // Return focus to the toggle only if focus was inside the drawer.
@@ -101,6 +103,7 @@
       setMenu(!menu.classList.contains('open'));
     });
   }
+  if (menuClose) menuClose.addEventListener('click', function () { setMenu(false); });
   backdrop.addEventListener('click', function () { setMenu(false); });
   menuLinks.forEach(function (a) {
     a.addEventListener('click', function () { setMenu(false); });

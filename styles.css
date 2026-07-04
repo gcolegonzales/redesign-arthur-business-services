@@ -112,10 +112,9 @@ p{margin:0}
 .menu-toggle{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px;z-index:80;
   -webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none}
 .menu-toggle span{width:24px;height:2px;background:var(--ink);border-radius:2px;transition:transform .35s var(--ease),opacity .25s}
-.menu-toggle[aria-expanded="true"] span{background:#fff}
-.menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
-.menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+/* The hamburger is the OPEN control only. When the drawer is open, hide it so
+   the in-panel X (.menu-close) is the single, always-visible close control. */
+.menu-toggle[aria-expanded="true"]{opacity:0;pointer-events:none;visibility:hidden}
 
 /* mobile menu — clip wrapper prevents the off-canvas panel from widening the page */
 .mobile-menu-wrap{position:fixed;inset:0;z-index:64;overflow:hidden;pointer-events:none}
@@ -129,6 +128,15 @@ p{margin:0}
   -webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none;
 }
 .mobile-menu.open{transform:translateX(0)}
+/* Single, always-visible close (X) control, pinned to the drawer's top-right. */
+.menu-close{position:absolute;top:20px;right:22px;z-index:2;
+  display:grid;place-items:center;width:44px;height:44px;padding:0;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+  border-radius:999px;color:#fff;cursor:pointer;
+  transition:background .25s var(--ease),border-color .25s var(--ease);
+  -webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none}
+.menu-close:hover{background:rgba(255,255,255,.16);border-color:var(--gold)}
+.menu-close:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 .mobile-menu nav{display:flex;flex-direction:column;gap:4px}
 .mobile-menu a{padding:14px 4px;font-size:1.15rem;font-family:"Fraunces",serif;border-bottom:1px solid rgba(255,255,255,.1);color:#fff;-webkit-tap-highlight-color:transparent}
 .mobile-menu a:hover{color:var(--gold)}
